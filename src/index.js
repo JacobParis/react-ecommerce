@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { ConnectedRouter } from "react-router-redux";
+import { Router } from "react-router-dom";
 
 import store, { history } from "./store";
 import App from "./components/App";
@@ -10,13 +10,11 @@ import "./index.css";
 
 const target = document.getElementById("root");
 
-render(
+ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
-    </ConnectedRouter>
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   target
 );
