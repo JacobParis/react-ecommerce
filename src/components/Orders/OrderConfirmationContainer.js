@@ -9,7 +9,7 @@ class OrderConfirmationContainer extends Component {
     script.src = "../../js/production.min.js";
     script.async = false;
 
-    document.body.appendChild(script);
+    //document.body.appendChild(script);
   }
 
   render() {

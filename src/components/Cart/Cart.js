@@ -3,7 +3,6 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import MobileNav from "../global/Mobile/MobileNav";
 import CartHeader from "./CartHeader";
 import CartItems from "./CartItems";
 
@@ -17,7 +16,7 @@ class Cart extends Component {
     script.src = "../../js/production.min.js";
     script.async = false;
 
-    document.body.appendChild(script);
+    //document.body.appendChild(script);
   }
 
   componentDidMount() {
@@ -37,7 +36,6 @@ class Cart extends Component {
         var subtotal = "$" + cart.cart.meta.display_price.with_tax.amount / 100;
         return (
           <div>
-            <MobileNav />
             <CartHeader />
             <main role="main" id="container" className="main-container push">
               <section className="cart">
@@ -71,7 +69,6 @@ class Cart extends Component {
       } else {
         return (
           <div>
-            <MobileNav />
             <CartHeader />
             <main role="main" id="container" className="main-container push">
               <section className="cart">
@@ -94,7 +91,6 @@ class Cart extends Component {
     } else {
       return (
         <div>
-          <MobileNav />
           <CartHeader />
           <main role="main" id="container" className="main-container push">
             <section>

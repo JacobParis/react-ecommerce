@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CheckoutSummary from "./CheckoutSummary";
 import { Field, reduxForm } from "redux-form";
 import * as api from "../../moltin";
-import { push } from "react-router-redux";
+//import { push } from "react-router-redux";
 import { connect } from "react-redux";
 
 import { SUBMIT_PAYMENT, PAYMENT_COMPLETE } from "../../ducks/payments";
@@ -90,7 +90,7 @@ class CheckoutForm extends Component {
       .then(() => {
         this.props.dispatch(dispatch => {
           dispatch({ type: PAYMENT_COMPLETE });
-          dispatch(push("/order-confirmation"));
+          //dispatch(push("/order-confirmation"));
         });
       })
 

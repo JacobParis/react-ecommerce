@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProductImage from "../Products/ProductImage";
-import { push } from "react-router-redux";
+//import { push } from "react-router-redux";
 
 import { SET_STYLE } from "../../ducks/styles";
 
@@ -13,7 +13,7 @@ class Categories extends Component {
   render() {
     var ToStyles = () => {
       this.props.dispatch(dispatch => {
-        dispatch(push("/styles"));
+        //       dispatch(push("/styles"));
       });
     };
 

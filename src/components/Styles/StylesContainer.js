@@ -7,7 +7,6 @@ import StylesMenu from "./StylesMenu";
 import StylesHeading from "./StylesHeading";
 import StyleProducts from "./StyleProducts";
 import Loading from "../global/Loading";
-import MobileNav from "../global/Mobile/MobileNav";
 
 import { GetProducts } from "../../ducks/products";
 import { GetCategories } from "../../ducks/categories";
@@ -20,7 +19,7 @@ class StylesContainer extends Component {
     script.src = "../../js/production.min.js";
     script.async = false;
 
-    document.body.appendChild(script);
+    //document.body.appendChild(script);
   }
 
   componentDidMount() {
@@ -40,7 +39,6 @@ class StylesContainer extends Component {
       if (categories.categories.data.length > 0) {
         return (
           <div>
-            <MobileNav />
             <StylesHeader />
             <main role="main" id="container" className="main-container push">
               <section className="style-links">
@@ -59,7 +57,6 @@ class StylesContainer extends Component {
       } else {
         return (
           <div>
-            <MobileNav />
             <StylesHeader />
             <StylesHeading />
             <main role="main" id="container" className="main-container push">
@@ -80,7 +77,6 @@ class StylesContainer extends Component {
     } else {
       return (
         <div>
-          <MobileNav />
           <StylesHeader />
           <Loading />
         </div>
